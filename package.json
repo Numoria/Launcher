@@ -1,55 +1,53 @@
 {
-  "name": "launcher",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+  "name": "helioslauncher",
+  "version": "1.8.0",
+  "productName": "Helios Launcher",
+  "description": "Modded Minecraft Launcher",
+  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "bugs": {
+    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
   },
-  "main": "background.js",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "cilinux": "node build.js WINDOWS && node build.js LINUX",
+    "cidarwin": "node build.js MAC",
+    "dist": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true node build.js",
+    "dist:win": "npm run dist -- WINDOWS",
+    "dist:mac": "npm run dist -- MAC",
+    "dist:linux": "npm run dist -- LINUX",
+    "lint": "eslint --config .eslintrc.json ."
+  },
+  "engines": {
+    "node": "14.x.x"
+  },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vuetify": "^2.4.0"
+    "@electron/remote": "^1.0.4",
+    "adm-zip": "^0.5.4",
+    "async": "^3.2.0",
+    "discord-rpc": "^3.2.0",
+    "ejs": "^3.1.6",
+    "ejs-electron": "^2.1.1",
+    "electron-updater": "^4.3.8",
+    "fs-extra": "^9.1.0",
+    "github-syntax-dark": "^0.5.0",
+    "jquery": "^3.6.0",
+    "request": "^2.88.2",
+    "semver": "^7.3.5",
+    "tar-fs": "^2.1.1",
+    "winreg": "^1.2.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "electron": "^11.0.0",
-    "electron-devtools-installer": "^3.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.32.0",
-    "sass-loader": "^10.0.0",
-    "vue-cli-plugin-electron-builder": "*",
-    "vue-cli-plugin-vuetify": "~2.3.1",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5",
+    "eslint": "^7.22.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+  }
 }
