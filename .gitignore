@@ -1,6 +1,8 @@
+# Generated
 /node_modules/
-/.vs/
-/.vscode/
-/target/
-/logs/
+app
+/package-lock.json
 /dist/
+node-v*
+AppData
+web/files/files
