@@ -18,7 +18,7 @@
     "node": "16.x.x"
   },
   "chromium-args": "--enable-logging --v=1 --disable-gpu --mixed-content",
-  "url": "https://numoria.com",
+  "url": "https://launch.numoria.com",
   "user": "",
   "webkit": {
     "plugin": true

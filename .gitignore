@@ -6,3 +6,4 @@ app
 node-v*
 AppData
 web/files/files
+.idea/

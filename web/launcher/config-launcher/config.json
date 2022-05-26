@@ -9,5 +9,5 @@
   "java": true,
   "game_args": [],
   "dataDirectory": ".numoria",
-  "ignored": ["config.json", "options.txt", "logs"]
+  "ignored": [".fabric", ".assets", "config", "logs", "resourcepacks", "runtime", "saves", "config.json", "options.txt", "realms_persistence.json", "servers.dat"]
 }
