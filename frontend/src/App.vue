@@ -1,16 +1,15 @@
 <script lang="ts" setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from './components/Login.vue'
 </script>
 
 <template>
-  <img id="logo" alt="Wails logo" src="./assets/images/logo-universal.png"/>
-  <HelloWorld/>
+  <img id="logo" alt="Wails logo" src="./assets/images/logo.png"/>
+  <Login/>
 </template>
 
 <style>
 #logo {
   display: block;
-  width: 50%;
   height: 50%;
   margin: auto;
   padding: 10% 0 0;
