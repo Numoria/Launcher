@@ -1,5 +1,7 @@
 # Generated
-node_modules/
-dist/
-.idea/
-bin/
+node_modules
+app
+test
+dist
+node-v*
+AppData
